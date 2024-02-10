@@ -7,13 +7,14 @@ import (
 	"time"
 
 	"data_gen/src_csv"
+
 	"github.com/brianvoe/gofakeit/v6"
 )
 
 func main() {
 	gofakeit.Seed(time.Now().UnixNano())
 
-	numRows := 30_000_00
+	numRows := 100000
 	outputFilename := "ecommerce_data.csv"
 
 	ch := make(chan src_csv.Row, 1000)
